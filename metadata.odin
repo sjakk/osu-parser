@@ -67,7 +67,7 @@ meta_init :: proc(pathfile:string,obj:^Metadata){
 
             case strings.contains(line,bm.Tags):
                 str,_ := strings.cut(line,len(bm.Tags))
-                value := strings.split_after(str," ")
+                value := strings.split(str," ")
                 obj.Tags = value
         }
             
